@@ -1,0 +1,23 @@
+<h3>Add a number for <%= @contact.name() %> </h3>
+
+<form action="/numbers" method="post">
+  <input id='contact_id' name='contact_id' type='hidden' value='<%= @contact.id() %>'>
+
+  <label for='type'>Number type:</label>
+  <input id='type' name='type' type='text' placeholder='ex: Mobile, Work, etc' autofocus>
+
+  <label for='number'>Number:</label>
+  <input id='number' name='number' type='text' placeholder='ex: 2025550101'>
+
+  <button type="submit">Add Number</button>
+</form>
+
+<hr>
+
+<ul>
+  <% @contact.numbers().each() do |number| %>
+  <li><%= number.type() %>: <%= number.number() %></li>
+  <% end %>
+</ul>
+
+<a href="/">Return to all contacts</a>

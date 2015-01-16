@@ -1,22 +1,11 @@
 class Contact
   @@all_contacts = []
+  attr_reader(:name, :numbers, :id)
 
-  define_method(:initialize) do |name|
-    @name = name
+  define_method(:initialize) do |attributes|
+    @name = attributes.fetch(:name)
     @numbers = []
     @id = @@all_contacts.length() + 1
-  end
-
-  define_method(:name) do
-    @name
-  end
-
-  define_method(:id) do
-    @id
-  end
-
-  define_method(:numbers) do
-    @numbers
   end
 
   define_method(:save) do
