@@ -1,22 +1,23 @@
-<h3>Add a number for <%= @contact.name() %> </h3>
+<h2>Add a number for <span class="contact-name"><%= @contact.name() %></span></h2>
 
 <form action="/numbers" method="post">
-  <input id='contact_id' name='contact_id' type='hidden' value='<%= @contact.id() %>'>
-
-  <label for='type'>Number type:</label>
-  <input id='type' name='type' type='text' placeholder='ex: Mobile, Work, etc' autofocus>
-
-  <label for='number'>Number:</label>
-  <input id='number' name='number' type='text' placeholder='ex: 2025550101'>
-
-  <button type="submit">Add Number</button>
+  <input id="contact_id" name="contact_id" type="hidden" value="<%= @contact.id() %>">
+  <div class="form-group">
+    <label for="type"></label>
+    <input id="type" name="type" type='text' placeholder="Number Type (ex: Home)" autofocus>
+  </div>
+  <div class="form-group">
+    <label for="number"></label>
+    <input id="number" name="number" type="text" placeholder="Number (ex: 2025550101)">
+  </div>
+    <button type="submit" class="butt">Add Number</button>
 </form>
 
 <hr>
 
 <ul>
   <% @contact.numbers().each() do |number| %>
-  <li><%= number.type() %>: <%= number.number() %></li>
+  <li><span class="num-type"><%= number.type() %></span>: <span class="num"><%= number.number() %></span></li>
   <% end %>
 </ul>
 

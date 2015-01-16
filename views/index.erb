@@ -1,14 +1,17 @@
 <h1>Comfortably Number</h1>
 
-<h3>Add a contact</h3>
+<h2>Add a contact</h2>
 
 <form action="/contacts" method="post">
-  <label for='name'>Name:</label>
-  <input id='name' name='name' type='text'>
-  <button type="submit">Add Contact</button>
+  <div class="form-group">
+    <label for="name"></label>
+    <input id="name" name="name" type="text" placeholder="Contact Name" autofocus>
+  </div>
+  <button type="submit" class="butt">Add Contact</button>
 </form>
+
 <hr>
-<h3>Your contacts</h3>
+<h2>Your contacts</h2>
 <ul>
   <% @contacts.each() do |contact| %>
   <li><a href="/contacts/<%= contact.id() %>"><%= contact.name() %></a></li>

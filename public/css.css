@@ -1,0 +1,83 @@
+body {
+  font-family: 'Rosario', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  background: #FFF3D6;
+  color: #FFF;
+}
+
+a {
+  color: #FFF;
+}
+
+a:hover {
+  color: #444;
+}
+
+h1, h2, h3 {
+  font-family: 'Oleo Script', cursive;
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 40px;
+}
+
+li {
+  margin-left: -2em;
+  list-style-type: none;
+}
+
+hr {
+  width: 50%;
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  background-image: -webkit-linear-gradient(left, #2780A2, #fff, #2780A2);
+  background-image:    -moz-linear-gradient(left, #2780A2, #fff, #2780A2);
+  background-image:     -ms-linear-gradient(left, #2780A2, #fff, #2780A2);
+  background-image:      -o-linear-gradient(left, #2780A2, #fff, #2780A2);
+}
+
+.container {
+  background: #2780A2;
+  width: 50%;
+  margin-top: 5%;
+  border: 0;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+.form-group {
+  margin: 1em 0;
+}
+
+input {
+  width: 60%;
+  text-align: center;
+}
+
+.contact-name {
+  text-decoration: underline;
+  font-size: 105%;
+}
+
+.num-type {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.num {
+  font-size: 1.2em;
+}
+
+.butt {
+  /*margin: 0 auto;*/
+  background-color: #FFF3D6;
+  color: #444;
+  border: 0 solid #fff;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}

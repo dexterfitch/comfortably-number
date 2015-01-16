@@ -21,7 +21,7 @@ post('/numbers') do
   number = params.fetch('number')
   @number = Phone.new({:type => type, :number => number})
   @number.save()
-  @contact = Contact.find(params.fetch('contact_id'))
+  @contact = Contact.find(params.fetch('contact_id').to_i())
   @contact.add_number(@number)
   erb(:contacts)
 end
