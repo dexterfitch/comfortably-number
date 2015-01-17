@@ -3,8 +3,8 @@ class Phone
   attr_reader(:type, :number, :id)
 
   define_method(:initialize) do |attributes|
-    @type = attributes.fetch(:type)
-    num = attributes.fetch(:number)
+    @type = attributes[:type]
+    num = attributes[:number]
     @number = num.to_i()
     @id = @@all_numbers.length() + 1
   end

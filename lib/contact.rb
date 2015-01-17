@@ -3,7 +3,7 @@ class Contact
   attr_reader(:name, :numbers, :id)
 
   define_method(:initialize) do |attributes|
-    @name = attributes.fetch(:name)
+    @name = attributes[:name]
     @numbers = []
     @id = @@all_contacts.length() + 1
   end
@@ -25,12 +25,11 @@ class Contact
   end
 
   define_singleton_method(:find) do |id|
-    found_contact = nil
     @@all_contacts.each() do |contact|
       if contact.id().eql?(id.to_i())
-        found_contact = contact
+        @found_contact = contact
       end
     end
-    found_contact
+    @found_contact
   end
 end
